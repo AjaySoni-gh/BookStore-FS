@@ -11,7 +11,11 @@ app.use(express.json());
 
 // Middleware for handling CORS POLICY
 // Option 1: Allow All Origins with Default of cors(*)
-app.use(cors());
+app.use(cors({
+  origin:["https://bookstrorefs-1whq.vercel.app"],
+   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credntials: true}
+));
 // Option 2: Allow Custom Origins
 // app.use(
 //   cors({
